@@ -1,0 +1,20 @@
+before_install:
+    - gem update --system
+    - gem install bundler
+    - bundle install
+    - bundle exec pod install --repo-update
+    - gem install linterbot
+    - brew install swiftlint
+cache:
+  - bundler
+  - cocoapods
+language: objective-c
+osx_image: xcode10
+xcode_project: DemoSurvey.xcworkspace
+xcode_scheme: "DemoSurvey"
+xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
+script:
+    - ./scripts/lint
+    - xcodebuild clean build -sdk iphonesimulator -workspace DemoSurvey.xcworkspace -scheme "DemoSurvey" CODE_SIGNING_REQUIRED=NO
+install:
+    - sudo systemsetup -settimezone Asia/Ho_Chi_Minh

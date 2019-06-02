@@ -22,6 +22,7 @@ PODS:
   - SDWebImage/Core (4.4.1)
   - SVProgressHUD (2.2.5)
   - SwiftDate (4.5.1)
+  - SwiftLint (0.29.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.2)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - SDWebImage (= 4.4.1)
   - SVProgressHUD (= 2.2.5)
   - SwiftDate (= 4.5.1)
+  - SwiftLint (= 0.29.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -45,6 +47,7 @@ SPEC REPOS:
     - SDWebImage
     - SVProgressHUD
     - SwiftDate
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -56,7 +59,8 @@ SPEC CHECKSUMS:
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftLint: d4e7443d93e2bbe868dc302e6c7ac30b469d6a14
 
-PODFILE CHECKSUM: 917571d1c43275af0912bd90db008ea9a7f3c07d
+PODFILE CHECKSUM: 328a9724f76de35099446a2507b647abfd41d2e9
 
 COCOAPODS: 1.5.3
