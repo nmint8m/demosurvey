@@ -12,6 +12,7 @@ def app_pods
     pod 'AsyncSwift', '2.0.4'
     pod 'SDWebImage', '4.4.1'
     pod 'SVProgressHUD', '2.2.5'
+    pod 'SwiftLint', '0.29.0'
 end
 
 def test_pods
