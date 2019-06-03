@@ -15,6 +15,6 @@ xcode_scheme: DemoSurveyTests
 xcode_destination: platform=iOS Simulator,OS=10.0,name=iPhone 8
 script:
     - ./scripts/lint
-    - xcodebuild clean build -sdk iphonesimulator -workspace DemoSurvey.xcworkspace -scheme DemoSurveyTests CODE_SIGNING_REQUIRED=NO
+    - swift test
 install:
     - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
