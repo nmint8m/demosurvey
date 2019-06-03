@@ -11,10 +11,10 @@ cache:
 language: objective-c
 osx_image: xcode10
 xcode_project: DemoSurvey.xcworkspace
-xcode_scheme: "DemoSurvey"
-xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
+xcode_scheme: DemoSurvey
+xcode_destination: platform=iOS Simulator, OS=10.0, name=iPhone 8
 script:
     - ./scripts/lint
-    - xcodebuild clean build -sdk iphonesimulator -workspace DemoSurvey.xcworkspace -scheme "DemoSurvey" CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean test -sdk iphonesimulator -workspace DemoSurvey.xcworkspace -scheme DemoSurvey CODE_SIGNING_REQUIRED=NO
 install:
     - sudo systemsetup -settimezone Asia/Ho_Chi_Minh

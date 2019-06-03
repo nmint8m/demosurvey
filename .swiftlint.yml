@@ -28,4 +28,6 @@ type_name:
   excluded: iPhone 
 identifier_name:
   min_length: 1
+nesting:
+  type_level: 3
 reporter: "xcode" 
