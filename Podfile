@@ -3,8 +3,6 @@ platform :ios, '10.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'DemoSurvey.xcodeproj'
-
 def app_pods
     pod 'ObjectMapper', '3.4.1'
     pod 'Alamofire', '4.8.2'
