@@ -12,5 +12,7 @@ final class SurveyListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        API.Authentication.getAccessToken()
+        API.Survey.getSurveyList(page: 1)
     }
 }
