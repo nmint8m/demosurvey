@@ -15,6 +15,6 @@ xcode_scheme: DemoSurvey
 xcode_destination: platform=iOS Simulator, OS=10.0, name=iPhone 8
 script:
     - ./scripts/lint
-    - xcodebuild clean test -sdk iphonesimulator -workspace DemoSurvey.xcworkspace -scheme DemoSurvey CODE_SIGNING_REQUIRED=NO
+    - bundle exec fastlane test
 install:
     - sudo systemsetup -settimezone Asia/Ho_Chi_Minh

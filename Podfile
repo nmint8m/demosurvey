@@ -3,8 +3,6 @@ platform :ios, '10.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'DemoSurvey.xcodeproj'
-
 def app_pods
     pod 'ObjectMapper', '3.4.1'
     pod 'Alamofire', '4.8.2'
@@ -16,7 +14,7 @@ def app_pods
 end
 
 def test_pods
-    pod 'Nimble', '7.3.1'
+    pod 'Nimble', '8.0.1'
     pod 'Quick', '1.3.2'
     pod 'OHHTTPStubs/Swift', '7.0.0'
 end
