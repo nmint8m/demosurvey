@@ -16,7 +16,7 @@ def app_pods
 end
 
 def test_pods
-    pod 'Nimble', '7.3.1'
+    pod 'Nimble', '8.0.1'
     pod 'Quick', '1.3.2'
     pod 'OHHTTPStubs/Swift', '7.0.0'
 end
