@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SurveyCell" customModule="DemoSurvey" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-PQ-Utw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7e-m3-Yhl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-Vz-L0j">
+                        <rect key="frame" x="20" y="265" width="335" height="37"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-aW-oLn">
+                        <rect key="frame" x="20" y="307" width="335" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-mu-9P6">
+                        <rect key="frame" x="87.5" y="537" width="200" height="50"/>
+                        <color key="backgroundColor" red="0.57626579349999996" green="0.15660245349999999" blue="0.13501287910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="6om-hd-jPY"/>
+                            <constraint firstAttribute="height" constant="50" id="neU-cZ-Dd6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                        <state key="normal" title="Take the survey!">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="takeSurveyButtonTouchUpInside:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SxQ-8a-x1P"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="J7e-m3-Yhl" secondAttribute="bottom" id="1PV-b3-WMO"/>
+                <constraint firstItem="bHP-aW-oLn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1n5-eo-xED"/>
+                <constraint firstItem="o5O-PQ-Utw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DLp-dU-QI5"/>
+                <constraint firstItem="j1O-Vz-L0j" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-50" id="GZK-Zi-9cW"/>
+                <constraint firstAttribute="trailing" secondItem="J7e-m3-Yhl" secondAttribute="trailing" id="I2C-gR-IBS"/>
+                <constraint firstItem="qjh-mu-9P6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="M9i-BU-acm"/>
+                <constraint firstItem="qjh-mu-9P6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bHP-aW-oLn" secondAttribute="bottom" constant="120" id="N76-7N-e9B"/>
+                <constraint firstAttribute="trailing" secondItem="o5O-PQ-Utw" secondAttribute="trailing" id="OGP-sh-SeZ"/>
+                <constraint firstItem="j1O-Vz-L0j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="PfO-Sx-p5I"/>
+                <constraint firstItem="bHP-aW-oLn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="RVD-1d-S4V"/>
+                <constraint firstItem="J7e-m3-Yhl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VdA-JC-DVf"/>
+                <constraint firstItem="J7e-m3-Yhl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f7L-Sh-4NJ"/>
+                <constraint firstAttribute="bottom" secondItem="o5O-PQ-Utw" secondAttribute="bottom" id="h5U-YL-K1p"/>
+                <constraint firstItem="j1O-Vz-L0j" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nPk-Lc-TSe"/>
+                <constraint firstItem="bHP-aW-oLn" firstAttribute="top" secondItem="j1O-Vz-L0j" secondAttribute="bottom" constant="5" id="r4S-s1-Mjg"/>
+                <constraint firstItem="o5O-PQ-Utw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rOM-O3-84f"/>
+                <constraint firstAttribute="bottom" secondItem="qjh-mu-9P6" secondAttribute="bottom" constant="80" id="xKF-0f-oZC"/>
+            </constraints>
+            <size key="customSize" width="315" height="454"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="bHP-aW-oLn" id="8SI-tb-IlV"/>
+                <outlet property="imageView" destination="o5O-PQ-Utw" id="ekx-bt-zdF"/>
+                <outlet property="takeSurveyButton" destination="qjh-mu-9P6" id="fYe-Q1-zHV"/>
+                <outlet property="titleLabel" destination="j1O-Vz-L0j" id="3WC-0k-LUt"/>
+            </connections>
+            <point key="canvasLocation" x="167.19999999999999" y="124.58770614692655"/>
+        </collectionViewCell>
+    </objects>
+</document>

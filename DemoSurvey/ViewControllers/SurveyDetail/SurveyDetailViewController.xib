@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyDetailViewController" customModule="DemoSurvey" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="DSr-Ga-inr" id="dMc-bW-NRY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-Ga-inr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UT1-IP-mRI">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ceq-iK-lOL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iaQ-dp-WAF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-iq-JtN">
+                                <rect key="frame" x="10" y="25" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="P5O-0D-NfE"/>
+                                    <constraint firstAttribute="height" constant="50" id="b1s-LC-Dja"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="7" minY="12" maxX="15" maxY="12"/>
+                                <state key="normal" image="img-back"/>
+                                <connections>
+                                    <action selector="backButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="6dW-Wm-V8c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oEE-iq-JtN" firstAttribute="leading" secondItem="iaQ-dp-WAF" secondAttribute="leading" constant="10" id="ADV-EW-eyQ"/>
+                            <constraint firstAttribute="bottom" secondItem="oEE-iq-JtN" secondAttribute="bottom" constant="5" id="PWY-hQ-jC8"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DSr-Ga-inr" secondAttribute="trailing" id="0JB-bE-Ko8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="Ceq-iK-lOL" secondAttribute="bottom" constant="-60" id="JbV-iy-ILO"/>
+                <constraint firstAttribute="bottom" secondItem="DSr-Ga-inr" secondAttribute="bottom" id="LJ6-wC-Z9h"/>
+                <constraint firstItem="Ceq-iK-lOL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ryh-sb-wT2"/>
+                <constraint firstItem="DSr-Ga-inr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aNZ-oD-byW"/>
+                <constraint firstItem="DSr-Ga-inr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dED-5D-lmC"/>
+                <constraint firstItem="Ceq-iK-lOL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lPT-Du-uyS"/>
+                <constraint firstItem="Ceq-iK-lOL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tlF-SG-6F2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="76" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img-back" width="200" height="200"/>
+    </resources>
+</document>

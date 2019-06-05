@@ -28,12 +28,11 @@ extension Request {
 
         switch statusCode {
         case 200:
-            if let data = data, let json = data.toJSON() {
-                // Success
+            if let data = data, let string = data.toString(), string.isEmpty || string == "[]" || string == "null" {
+                // Success but no response / null / emty array
+                return .success([])
+            } else if let data = data, let json = data.toJSON() {
                 return .success(json)
-            } else if let data = data, let string = data.toString(), string.isEmpty {
-                // Success but no response
-                return .success([:])
             } else {
                 return .failure(API.Error.json)
             }
