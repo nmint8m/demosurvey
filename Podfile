@@ -6,11 +6,13 @@ use_frameworks!
 def app_pods
     pod 'ObjectMapper', '3.4.1'
     pod 'Alamofire', '4.8.2'
-    pod 'SwiftDate', '4.5.1'
+    pod 'AlamofireNetworkActivityIndicator', '2.3.0'
+    pod 'SwifterSwift', '4.5.0'
     pod 'AsyncSwift', '2.0.4'
     pod 'SDWebImage', '4.4.1'
     pod 'SVProgressHUD', '2.2.5'
     pod 'SwiftLint', '0.29.0'
+    pod 'CHIPageControl/Aji', '0.1.7'
 end
 
 def test_pods

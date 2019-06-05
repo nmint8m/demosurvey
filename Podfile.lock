@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.8.2)
+  - AlamofireNetworkActivityIndicator (2.3.0):
+    - Alamofire (~> 4.7)
   - AsyncSwift (2.0.4)
+  - CHIPageControl/Aji (0.1.7)
   - Nimble (8.0.1)
   - ObjectMapper (3.4.1)
   - OHHTTPStubs/Core (7.0.0)
@@ -21,46 +24,68 @@ PODS:
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
   - SVProgressHUD (2.2.5)
-  - SwiftDate (4.5.1)
+  - SwifterSwift (4.5.0):
+    - SwifterSwift/AppKit (= 4.5.0)
+    - SwifterSwift/CoreGraphics (= 4.5.0)
+    - SwifterSwift/CoreLocation (= 4.5.0)
+    - SwifterSwift/Foundation (= 4.5.0)
+    - SwifterSwift/MapKit (= 4.5.0)
+    - SwifterSwift/SpriteKit (= 4.5.0)
+    - SwifterSwift/SwiftStdlib (= 4.5.0)
+    - SwifterSwift/UIKit (= 4.5.0)
+  - SwifterSwift/AppKit (4.5.0)
+  - SwifterSwift/CoreGraphics (4.5.0)
+  - SwifterSwift/CoreLocation (4.5.0)
+  - SwifterSwift/Foundation (4.5.0)
+  - SwifterSwift/MapKit (4.5.0)
+  - SwifterSwift/SpriteKit (4.5.0)
+  - SwifterSwift/SwiftStdlib (4.5.0)
+  - SwifterSwift/UIKit (4.5.0)
   - SwiftLint (0.29.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.2)
+  - AlamofireNetworkActivityIndicator (= 2.3.0)
   - AsyncSwift (= 2.0.4)
+  - CHIPageControl/Aji (= 0.1.7)
   - Nimble (= 8.0.1)
   - ObjectMapper (= 3.4.1)
   - OHHTTPStubs/Swift (= 7.0.0)
   - Quick (= 1.3.2)
   - SDWebImage (= 4.4.1)
   - SVProgressHUD (= 2.2.5)
-  - SwiftDate (= 4.5.1)
+  - SwifterSwift (= 4.5.0)
   - SwiftLint (= 0.29.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireNetworkActivityIndicator
     - AsyncSwift
+    - CHIPageControl
     - Nimble
     - ObjectMapper
     - OHHTTPStubs
     - Quick
     - SDWebImage
     - SVProgressHUD
-    - SwiftDate
+    - SwifterSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireNetworkActivityIndicator: 18346ff6d770d9513d0ac6f2d99706f40f93dbaa
   AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  CHIPageControl: bbe1ddd0c688c02ec65b7f7e7d34551a3d16f37c
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
   OHHTTPStubs: ef33a2c353110d306bb98f695435ec56ff5a26c3
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwifterSwift: 45339f9100181f0ca1d9b46248e45d0879a48596
   SwiftLint: d4e7443d93e2bbe868dc302e6c7ac30b469d6a14
 
-PODFILE CHECKSUM: 4d58f7346f53ace915328c7594ca7562f11a30d2
+PODFILE CHECKSUM: 5ea7755eb81c9bd1d0841cc38cb8e4099722d133
 
 COCOAPODS: 1.5.3

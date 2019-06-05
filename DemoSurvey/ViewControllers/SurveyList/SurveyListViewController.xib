@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyListViewController" customModule="DemoSurvey" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="THA-tl-qMF" id="cfB-pO-blB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +20,74 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="THA-tl-qMF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="C2l-vY-HOr">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-ZC-itv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H5X-7k-c1b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-Bv-jkd">
+                                <rect key="frame" x="10" y="25" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HO7-Ab-8j2"/>
+                                    <constraint firstAttribute="height" constant="50" id="OdM-ss-SIR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="14" minY="12" maxX="14" maxY="12"/>
+                                <state key="normal" image="img-reload"/>
+                                <connections>
+                                    <action selector="reloadButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="h1b-cC-gk3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hz-FJ-3wH">
+                                <rect key="frame" x="315" y="25" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P23-my-SiF"/>
+                                    <constraint firstAttribute="width" constant="50" id="Q6Q-4J-MOs"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                <state key="normal" image="img-setting"/>
+                                <connections>
+                                    <action selector="settingButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="lLV-r4-IsY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5hz-FJ-3wH" secondAttribute="bottom" constant="5" id="S8p-1p-zjE"/>
+                            <constraint firstAttribute="bottom" secondItem="hdr-Bv-jkd" secondAttribute="bottom" constant="5" id="YV9-7t-s4Y"/>
+                            <constraint firstItem="hdr-Bv-jkd" firstAttribute="leading" secondItem="H5X-7k-c1b" secondAttribute="leading" constant="10" id="aUT-Nf-G5p"/>
+                            <constraint firstAttribute="trailing" secondItem="5hz-FJ-3wH" secondAttribute="trailing" constant="10" id="knb-As-91a"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AsO-ZC-itv" secondAttribute="trailing" id="7zp-FW-BXJ"/>
+                <constraint firstItem="THA-tl-qMF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FCl-LO-3ie"/>
+                <constraint firstItem="THA-tl-qMF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jgz-7R-JWM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="THA-tl-qMF" secondAttribute="trailing" id="NPf-a4-tRB"/>
+                <constraint firstItem="AsO-ZC-itv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cpl-Tz-ijk"/>
+                <constraint firstItem="AsO-ZC-itv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jNL-0G-SEw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="AsO-ZC-itv" secondAttribute="bottom" constant="-60" id="sUv-3h-89T"/>
+                <constraint firstAttribute="bottom" secondItem="THA-tl-qMF" secondAttribute="bottom" id="x6F-CP-gKO"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="img-reload" width="200" height="200"/>
+        <image name="img-setting" width="200" height="200"/>
+    </resources>
 </document>
