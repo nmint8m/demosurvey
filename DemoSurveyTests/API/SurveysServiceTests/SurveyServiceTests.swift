@@ -19,7 +19,7 @@ final class SurveyServiceTests: QuickSpec {
         describe("Test SurveyService") {
 
             it("Tests getSurveyList success") {
-                stub(condition: isHost(host) && isPath(Config.authenPath), response: { _ -> OHHTTPStubsResponse in
+                stub(condition: isHost(host) && isPath(Config.surveysPath), response: { _ -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile(Config.successFilePath, type(of: self)) else {
                         fail("File not found")
                         return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
@@ -28,7 +28,7 @@ final class SurveyServiceTests: QuickSpec {
                         .setRequestTime()
                 })
 
-                waitUntil(timeout: 10) { done in
+                waitUntil(timeout: 100) { done in
                     API.Survey.getSurveyList(page: 0) { result in
                         switch result {
                         case .success(let surveys):
@@ -42,7 +42,7 @@ final class SurveyServiceTests: QuickSpec {
             }
 
             it("Tests getSurveyList success") {
-                stub(condition: isHost(host) && isPath(Config.authenPath), response: { _ -> OHHTTPStubsResponse in
+                stub(condition: isHost(host) && isPath(Config.surveysPath), response: { _ -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile(Config.noContentFilePath1, type(of: self)) else {
                         fail("File not found")
                         return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
@@ -65,7 +65,7 @@ final class SurveyServiceTests: QuickSpec {
             }
 
             it("Tests getSurveyList success") {
-                stub(condition: isHost(host) && isPath(Config.authenPath), response: { _ -> OHHTTPStubsResponse in
+                stub(condition: isHost(host) && isPath(Config.surveysPath), response: { _ -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile(Config.noContentFilePath2, type(of: self)) else {
                         fail("File not found")
                         return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
@@ -88,7 +88,7 @@ final class SurveyServiceTests: QuickSpec {
             }
 
             it("Tests getSurveyList error") {
-                stub(condition: isHost(host) && isPath(Config.authenPath), response: { _ -> OHHTTPStubsResponse in
+                stub(condition: isHost(host) && isPath(Config.surveysPath), response: { _ -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile(Config.noContentFilePath1, type(of: self)) else {
                         fail("File not found")
                         return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
@@ -121,7 +121,7 @@ final class SurveyServiceTests: QuickSpec {
 extension SurveyServiceTests {
 
     private struct Config {
-        static let authenPath = "/surveys.json"
+        static let surveysPath = "/surveys.json"
 
         // File path
         static let noContentFilePath1 = "SurveysServiceTests-NoContent-1.json"
