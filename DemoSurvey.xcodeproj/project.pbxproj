@@ -45,6 +45,10 @@
 		2294DC7A22A7BD520081A6D3 /* SurveyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2294DC7822A7BD520081A6D3 /* SurveyDetailViewController.xib */; };
 		2294DC7C22A7BD690081A6D3 /* SurveyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294DC7B22A7BD690081A6D3 /* SurveyDetailViewModel.swift */; };
 		22A50B3122A8F13900694FC7 /* SurveysServiceTests-NoContent-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A50B3022A8F13900694FC7 /* SurveysServiceTests-NoContent-2.json */; };
+		22A50B3A22A9605500694FC7 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B3922A9605500694FC7 /* SurveyListViewModelTests.swift */; };
+		22A50B3C22A9606A00694FC7 /* SurveyDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B3B22A9606A00694FC7 /* SurveyDetailViewModelTests.swift */; };
+		22A50B3F22A9608700694FC7 /* QuestionCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B3E22A9608700694FC7 /* QuestionCellViewModelTests.swift */; };
+		22A50B4222A960A200694FC7 /* SurveyCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B4122A960A200694FC7 /* SurveyCellViewModelTests.swift */; };
 		22A50B3322A914DD00694FC7 /* AuthenticationTests-401Error.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A50B3222A914DD00694FC7 /* AuthenticationTests-401Error.json */; };
 		22A50B3522A9194800694FC7 /* AuthenticationTests-Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A50B3422A9194800694FC7 /* AuthenticationTests-Success.json */; };
 		22B5E8E1229F7A0600B52995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B5E8E0229F7A0600B52995 /* AppDelegate.swift */; };
@@ -116,6 +120,10 @@
 		2294DC7822A7BD520081A6D3 /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
 		2294DC7B22A7BD690081A6D3 /* SurveyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModel.swift; sourceTree = "<group>"; };
 		22A50B3022A8F13900694FC7 /* SurveysServiceTests-NoContent-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SurveysServiceTests-NoContent-2.json"; sourceTree = "<group>"; };
+		22A50B3922A9605500694FC7 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
+		22A50B3B22A9606A00694FC7 /* SurveyDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModelTests.swift; sourceTree = "<group>"; };
+		22A50B3E22A9608700694FC7 /* QuestionCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCellViewModelTests.swift; sourceTree = "<group>"; };
+		22A50B4122A960A200694FC7 /* SurveyCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCellViewModelTests.swift; sourceTree = "<group>"; };
 		22A50B3222A914DD00694FC7 /* AuthenticationTests-401Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AuthenticationTests-401Error.json"; sourceTree = "<group>"; };
 		22A50B3422A9194800694FC7 /* AuthenticationTests-Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "AuthenticationTests-Success.json"; sourceTree = "<group>"; };
 		22B5E8DD229F7A0600B52995 /* DemoSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +354,49 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		22A50B3622A9600C00694FC7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				22A50B3822A9602E00694FC7 /* SurveyDetail */,
+				22A50B3722A9602300694FC7 /* SurveyList */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		22A50B3722A9602300694FC7 /* SurveyList */ = {
+			isa = PBXGroup;
+			children = (
+				22A50B4022A9608C00694FC7 /* Cell */,
+				22A50B3922A9605500694FC7 /* SurveyListViewModelTests.swift */,
+			);
+			path = SurveyList;
+			sourceTree = "<group>";
+		};
+		22A50B3822A9602E00694FC7 /* SurveyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				22A50B3D22A9607600694FC7 /* Cell */,
+				22A50B3B22A9606A00694FC7 /* SurveyDetailViewModelTests.swift */,
+			);
+			path = SurveyDetail;
+			sourceTree = "<group>";
+		};
+		22A50B3D22A9607600694FC7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				22A50B3E22A9608700694FC7 /* QuestionCellViewModelTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		22A50B4022A9608C00694FC7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				22A50B4122A960A200694FC7 /* SurveyCellViewModelTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		22B5E8D4229F7A0600B52995 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +433,7 @@
 		22B5E8F4229F7A0B00B52995 /* DemoSurveyTests */ = {
 			isa = PBXGroup;
 			children = (
+				22A50B3622A9600C00694FC7 /* ViewModels */,
 				2204DC1022A809FB002D94D6 /* API */,
 				22B5E8F7229F7A0B00B52995 /* Info.plist */,
 				2204DC1A22A81218002D94D6 /* Definition.swift */,
@@ -746,10 +798,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A50B4222A960A200694FC7 /* SurveyCellViewModelTests.swift in Sources */,
 				2204DC1222A80A29002D94D6 /* CoreTests.swift in Sources */,
 				2204DC1B22A81218002D94D6 /* Definition.swift in Sources */,
+				22A50B3A22A9605500694FC7 /* SurveyListViewModelTests.swift in Sources */,
 				2204DC1622A80A9B002D94D6 /* AuthenticationServiceTests.swift in Sources */,
+				22A50B3F22A9608700694FC7 /* QuestionCellViewModelTests.swift in Sources */,
 				2204DC1422A80A8B002D94D6 /* SurveyServiceTests.swift in Sources */,
+				22A50B3C22A9606A00694FC7 /* SurveyDetailViewModelTests.swift in Sources */,
 				22F2FB2E22A8A233007EC7AE /* SupportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
