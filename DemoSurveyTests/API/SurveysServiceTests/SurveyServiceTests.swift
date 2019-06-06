@@ -28,7 +28,7 @@ final class SurveyServiceTests: QuickSpec {
                         .setRequestTime()
                 })
 
-                waitUntil(timeout: 100000) { done in
+                waitUntil(timeout: 10) { done in
                     API.Survey.getSurveyList(page: 0) { result in
                         switch result {
                         case .success(let surveys):
