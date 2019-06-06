@@ -37,8 +37,13 @@ extension API {
                 switch result {
                 case .success(let value):
                     guard let json = value as? JSArray else {
+                        let string = value as? String
+                        if string == nil {
+                            completion?(.success([]))
+                        } else {
                             completion?(.failure(API.Error.json))
-                            return
+                        }
+                        return
                     }
                     let surveys = Mapper<SurveyInfo>().mapArray(JSONArray: json)
                     completion?(.success(surveys))

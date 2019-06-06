@@ -17,3 +17,10 @@ extension OHHTTPStubsResponse {
         return self
     }
 }
+
+extension QuickSpec {
+
+    func success() {
+        expect(true) == true
+    }
+}

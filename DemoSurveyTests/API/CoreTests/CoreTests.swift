@@ -43,7 +43,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-Error.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 401, headers: nil)
                         .setRequestTime()
@@ -68,7 +68,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-Error.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 400, headers: nil)
                         .setRequestTime()
@@ -93,7 +93,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-Error.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 500, headers: nil)
                         .setRequestTime()
@@ -118,7 +118,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-Error.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 600, headers: nil)
                         .setRequestTime()
@@ -143,7 +143,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-201Response.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 201, headers: nil)
                         .setRequestTime()
@@ -168,7 +168,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-200Response.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 200, headers: nil)
                         .setRequestTime()
@@ -193,7 +193,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-200Response-EmptyJSON.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 200, headers: nil)
                         .setRequestTime()
@@ -218,7 +218,7 @@ final class CoreTests: QuickSpec {
                 stub(condition: isHost(host) && isPath("/oauth/token"), response: { (_) -> OHHTTPStubsResponse in
                     guard let path = OHPathForFile("CoreTests-200Response-ErrorJSON.json", type(of: self)) else {
                         fail("File not found")
-                        return OHHTTPStubsResponse(error: API.Error.json)
+                        return OHHTTPStubsResponse(error: Test.Error.fileNotFound)
                     }
                     return fixture(filePath: path, status: 200, headers: nil)
                         .setRequestTime()
@@ -243,9 +243,5 @@ final class CoreTests: QuickSpec {
         afterEach {
             OHHTTPStubs.removeAllStubs()
         }
-    }
-
-    private func success() {
-        expect(true) == true
     }
 }
