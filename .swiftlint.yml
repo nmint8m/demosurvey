@@ -8,6 +8,7 @@ excluded:
   - Carthage
   - Pods
   - vendor
+  - DemoSurveyTests
 analyzer_rules: 
   - explicit_self
 force_cast: warning
