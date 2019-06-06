@@ -6,6 +6,6 @@
 //  Copyright © 2019 Tam Nguyen M. All rights reserved.
 //
 
-import Foundation
+import OHHTTPStubs
 
 let host = "nimble-survey-api.herokuapp.com"
