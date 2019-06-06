@@ -9,3 +9,9 @@
 import OHHTTPStubs
 
 let host = "nimble-survey-api.herokuapp.com"
+
+struct Test {
+    struct Error {
+        static let fileNotFound = NSError(domain: "DemoSurveyTests", code: -1, userInfo: nil)
+    }
+}
