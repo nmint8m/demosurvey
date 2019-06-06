@@ -49,6 +49,8 @@
 		22A50B3C22A9606A00694FC7 /* SurveyDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B3B22A9606A00694FC7 /* SurveyDetailViewModelTests.swift */; };
 		22A50B3F22A9608700694FC7 /* QuestionCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B3E22A9608700694FC7 /* QuestionCellViewModelTests.swift */; };
 		22A50B4222A960A200694FC7 /* SurveyCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50B4122A960A200694FC7 /* SurveyCellViewModelTests.swift */; };
+		22A50B3322A914DD00694FC7 /* AuthenticationTests-401Error.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A50B3222A914DD00694FC7 /* AuthenticationTests-401Error.json */; };
+		22A50B3522A9194800694FC7 /* AuthenticationTests-Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A50B3422A9194800694FC7 /* AuthenticationTests-Success.json */; };
 		22B5E8E1229F7A0600B52995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B5E8E0229F7A0600B52995 /* AppDelegate.swift */; };
 		22B5E8E8229F7A0A00B52995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B5E8E7229F7A0A00B52995 /* Assets.xcassets */; };
 		22B5E8EB229F7A0A00B52995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B5E8E9229F7A0A00B52995 /* LaunchScreen.storyboard */; };
@@ -122,6 +124,8 @@
 		22A50B3B22A9606A00694FC7 /* SurveyDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModelTests.swift; sourceTree = "<group>"; };
 		22A50B3E22A9608700694FC7 /* QuestionCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCellViewModelTests.swift; sourceTree = "<group>"; };
 		22A50B4122A960A200694FC7 /* SurveyCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCellViewModelTests.swift; sourceTree = "<group>"; };
+		22A50B3222A914DD00694FC7 /* AuthenticationTests-401Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AuthenticationTests-401Error.json"; sourceTree = "<group>"; };
+		22A50B3422A9194800694FC7 /* AuthenticationTests-Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "AuthenticationTests-Success.json"; sourceTree = "<group>"; };
 		22B5E8DD229F7A0600B52995 /* DemoSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B5E8E0229F7A0600B52995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B5E8E7229F7A0A00B52995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -480,6 +484,8 @@
 		22DC364C22A835CE00634455 /* AuthenticationServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				22A50B3222A914DD00694FC7 /* AuthenticationTests-401Error.json */,
+				22A50B3422A9194800694FC7 /* AuthenticationTests-Success.json */,
 				2204DC1522A80A9B002D94D6 /* AuthenticationServiceTests.swift */,
 			);
 			path = AuthenticationServiceTests;
@@ -612,10 +618,12 @@
 				22DC364822A8317C00634455 /* CoreTests-201Response.json in Resources */,
 				22DC364622A8300400634455 /* CoreTests-200Response.json in Resources */,
 				22F2FB3022A8AF26007EC7AE /* CoreTests-200Response-EmptyJSON.json in Resources */,
+				22A50B3322A914DD00694FC7 /* AuthenticationTests-401Error.json in Resources */,
 				2204DC1922A80F2A002D94D6 /* CoreTests-Error.json in Resources */,
 				22DC364A22A8328F00634455 /* CoreTests-200Response-ErrorJSON.json in Resources */,
 				22A50B3122A8F13900694FC7 /* SurveysServiceTests-NoContent-2.json in Resources */,
 				22F2FB3722A8CFCF007EC7AE /* SurveysServiceTests-NoContent-1.json in Resources */,
+				22A50B3522A9194800694FC7 /* AuthenticationTests-Success.json in Resources */,
 				22F2FB3922A8E3AF007EC7AE /* SurveysServiceTests-Success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
