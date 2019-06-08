@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyListViewController" customModule="DemoSurvey" customModuleProvider="target">
             <connections>
@@ -38,35 +43,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-Bv-jkd">
-                                <rect key="frame" x="10" y="25" width="50" height="50"/>
+                                <rect key="frame" x="5" y="25" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HO7-Ab-8j2"/>
                                     <constraint firstAttribute="height" constant="50" id="OdM-ss-SIR"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="14" minY="12" maxX="14" maxY="12"/>
+                                <inset key="imageEdgeInsets" minX="13" minY="13" maxX="13" maxY="13"/>
                                 <state key="normal" image="img-reload"/>
                                 <connections>
                                     <action selector="reloadButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="h1b-cC-gk3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hz-FJ-3wH">
-                                <rect key="frame" x="315" y="25" width="50" height="50"/>
+                                <rect key="frame" x="320" y="25" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="P23-my-SiF"/>
                                     <constraint firstAttribute="width" constant="50" id="Q6Q-4J-MOs"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                <inset key="imageEdgeInsets" minX="14" minY="14" maxX="14" maxY="14"/>
                                 <state key="normal" image="img-setting"/>
                                 <connections>
                                     <action selector="settingButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="lLV-r4-IsY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SURVEYS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-Ov-V8w">
+                                <rect key="frame" x="144" y="39" width="87.5" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="5hz-FJ-3wH" secondAttribute="bottom" constant="5" id="S8p-1p-zjE"/>
                             <constraint firstAttribute="bottom" secondItem="hdr-Bv-jkd" secondAttribute="bottom" constant="5" id="YV9-7t-s4Y"/>
-                            <constraint firstItem="hdr-Bv-jkd" firstAttribute="leading" secondItem="H5X-7k-c1b" secondAttribute="leading" constant="10" id="aUT-Nf-G5p"/>
-                            <constraint firstAttribute="trailing" secondItem="5hz-FJ-3wH" secondAttribute="trailing" constant="10" id="knb-As-91a"/>
+                            <constraint firstItem="hdr-Bv-jkd" firstAttribute="leading" secondItem="H5X-7k-c1b" secondAttribute="leading" constant="5" id="aUT-Nf-G5p"/>
+                            <constraint firstAttribute="trailing" secondItem="5hz-FJ-3wH" secondAttribute="trailing" constant="5" id="knb-As-91a"/>
+                            <constraint firstItem="K5h-Ov-V8w" firstAttribute="centerY" secondItem="5hz-FJ-3wH" secondAttribute="centerY" id="pcc-kL-12t"/>
+                            <constraint firstItem="K5h-Ov-V8w" firstAttribute="centerX" secondItem="H5X-7k-c1b" secondAttribute="centerX" id="uB7-1O-bfE"/>
                         </constraints>
                     </view>
                     <blurEffect style="dark"/>
