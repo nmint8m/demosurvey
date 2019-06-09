@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurveyDetailViewController" customModule="DemoSurvey" customModuleProvider="target">
             <connections>
@@ -23,7 +28,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-Ga-inr">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UT1-IP-mRI">
                         <size key="itemSize" width="0.0" height="0.0"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -38,27 +43,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-iq-JtN">
-                                <rect key="frame" x="10" y="25" width="50" height="50"/>
+                                <rect key="frame" x="5" y="25" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="P5O-0D-NfE"/>
                                     <constraint firstAttribute="height" constant="50" id="b1s-LC-Dja"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="7" minY="12" maxX="15" maxY="12"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="12" maxX="14" maxY="12"/>
                                 <state key="normal" image="img-back"/>
                                 <connections>
                                     <action selector="backButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="6dW-Wm-V8c"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SURVEY CONTENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue8-uG-xlG">
+                                <rect key="frame" x="101" y="39" width="173" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="oEE-iq-JtN" firstAttribute="leading" secondItem="iaQ-dp-WAF" secondAttribute="leading" constant="10" id="ADV-EW-eyQ"/>
+                            <constraint firstItem="ue8-uG-xlG" firstAttribute="centerX" secondItem="iaQ-dp-WAF" secondAttribute="centerX" id="6gU-Tp-dl2"/>
+                            <constraint firstItem="ue8-uG-xlG" firstAttribute="centerY" secondItem="oEE-iq-JtN" secondAttribute="centerY" id="8hk-l1-bx3"/>
+                            <constraint firstItem="oEE-iq-JtN" firstAttribute="leading" secondItem="iaQ-dp-WAF" secondAttribute="leading" constant="5" id="ADV-EW-eyQ"/>
                             <constraint firstAttribute="bottom" secondItem="oEE-iq-JtN" secondAttribute="bottom" constant="5" id="PWY-hQ-jC8"/>
                         </constraints>
                     </view>
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DSr-Ga-inr" secondAttribute="trailing" id="0JB-bE-Ko8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="Ceq-iK-lOL" secondAttribute="bottom" constant="-60" id="JbV-iy-ILO"/>
