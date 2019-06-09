@@ -13,6 +13,8 @@ final class SurveyDetailViewController: ViewController {
     // MARK: - Properties
     var viewModel = SurveyDetailViewModel()
 
+    private var loadMoreController = LoadMoreController()
+
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
 
@@ -20,6 +22,7 @@ final class SurveyDetailViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
+        configLoadMoreController()
     }
 
     // MARK: - IBActions
@@ -62,6 +65,13 @@ extension SurveyDetailViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - UIScrollViewDelegate
+extension SurveyDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        loadMoreController.scrollViewDidScroll()
+    }
+}
+
 // MARK: - UIGestureRecognizerDelegate
 extension SurveyDetailViewController {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -75,5 +85,30 @@ extension SurveyDetailViewController {
 
     private struct Config {
         static let cellName = "QuestionCell"
+        static let positionStartLoadMore: CGFloat = screenSize.height * 3
+    }
+}
+
+// MARK: - ScrollLoadControllerDelegate
+extension SurveyDetailViewController: LoadMoreControllerDelegate {
+
+    var scrollView: UIScrollView {
+        return collectionView
+    }
+
+    var positionStartLoadMore: CGFloat {
+        return Config.positionStartLoadMore
+    }
+
+    func shouldLoadMore(_ controller: LoadMoreController,
+                        scrollView: UIScrollView,
+                        shouldLoadMore: Bool) {
+        // TODO: - Handle should load more
+    }
+
+    private func configLoadMoreController() {
+        let loadMoreController = LoadMoreController()
+        loadMoreController.delegate = self
+        self.loadMoreController = loadMoreController
     }
 }

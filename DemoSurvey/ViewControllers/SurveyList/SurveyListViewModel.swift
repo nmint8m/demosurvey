@@ -71,16 +71,6 @@ extension SurveyListViewModel {
             }
         }
     }
-
-    func shouldLoadMoreData(cellWillDisplayAt indexPath: IndexPath) -> Bool {
-        let newCellIndex = indexPath.item
-        guard newCellIndex >= oldCellIndex,
-            newCellIndex > surveys.count - 5 else {
-            return false
-        }
-        oldCellIndex = newCellIndex
-        return isLoading ? false : true
-    }
 }
 
 // MARK: - Functions for calling API Authentication

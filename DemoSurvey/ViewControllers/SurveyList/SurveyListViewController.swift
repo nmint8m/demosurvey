@@ -16,6 +16,8 @@ final class SurveyListViewController: ViewController {
     // MARK: - Properties
     var viewModel = SurveyListViewModel()
 
+    private var loadMoreController = LoadMoreController()
+
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     private weak var pageControl: CHIPageControlAji!
@@ -38,6 +40,7 @@ final class SurveyListViewController: ViewController {
         } else {
             loadData(isLoadMore: false)
         }
+        configLoadMoreController()
     }
 
     // MARK: - IBActions
@@ -111,7 +114,7 @@ extension SurveyListViewController {
                     if isLoadMore {
                         this.handleNewLoadedSurvey(needsLoadMore: needsLoadMore)
                     } else {
-                        this.collectionView.setContentOffset(.zero, animated: true)
+                        this.collectionView.setContentOffset(.zero, animated: false)
                         this.collectionView.reloadData()
                     }
                     this.updatePageControl(needsReload: !isLoadMore)
@@ -191,15 +194,6 @@ extension SurveyListViewController: UICollectionViewDataSource {
     }
 }
 
-extension SurveyListViewController: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if viewModel.shouldLoadMoreData(cellWillDisplayAt: indexPath) {
-            loadData(isLoadMore: true)
-        }
-    }
-}
-
 // MARK: - UICollectionViewDelegateFlowLayout
 extension SurveyListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -210,9 +204,11 @@ extension SurveyListViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UIScrollViewDelegate
 extension SurveyListViewController: UIScrollViewDelegate {
 
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = Int(scrollView.contentOffset.y / screenSize.height)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageNumber = Int((scrollView.contentOffset.y / screenSize.height).rounded())
         pageControl.set(progress: pageNumber, animated: true)
+
+        loadMoreController.scrollViewDidScroll()
     }
 }
 
@@ -256,5 +252,33 @@ extension SurveyListViewController {
                    y: Config.pageControlTopPadding,
                    width: pageControlHeight,
                    height: pageControlWidth)
+        static let positionStartLoadMore: CGFloat = screenSize.height * 4
+    }
+}
+
+// MARK: - ScrollLoadControllerDelegate
+extension SurveyListViewController: LoadMoreControllerDelegate {
+
+    var scrollView: UIScrollView {
+        return collectionView
+    }
+
+    var positionStartLoadMore: CGFloat {
+        return Config.positionStartLoadMore
+    }
+
+    func shouldLoadMore(_ controller: LoadMoreController,
+                        scrollView: UIScrollView,
+                        shouldLoadMore: Bool) {
+        if shouldLoadMore {
+            loadData(isLoadMore: true)
+        }
+        print("shouldLoadMore \(shouldLoadMore)")
+    }
+
+    private func configLoadMoreController() {
+        let loadMoreController = LoadMoreController()
+        loadMoreController.delegate = self
+        self.loadMoreController = loadMoreController
     }
 }

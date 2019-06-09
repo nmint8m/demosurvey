@@ -57,10 +57,6 @@ final class SurveyListViewModelTests: QuickSpec {
                     expect {
                         try viewModel.surveyDetailViewModelForItem(at: Config.indexPathRow0)
                         }.notTo(throwError(Errors.indexOutOfBound))
-
-                    expect(viewModel.shouldLoadMoreData(cellWillDisplayAt: Config.indexPathRow1)) == false
-
-                    expect(viewModel.shouldLoadMoreData(cellWillDisplayAt: Config.indexPathRow6)) == true
                 }
             }
 
