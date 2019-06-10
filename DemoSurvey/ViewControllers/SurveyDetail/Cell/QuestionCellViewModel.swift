@@ -17,7 +17,7 @@ final class QuestionCellViewModel {
     }
 
     var imageURLString: String {
-        return questionInfo.coverImageURL
+        return questionInfo.coverImageURL + "l"
     }
 
     init(questionInfo: QuestionInfo = QuestionInfo()) {

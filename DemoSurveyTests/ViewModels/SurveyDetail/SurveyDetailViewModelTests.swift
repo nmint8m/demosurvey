@@ -36,7 +36,7 @@ final class SurveyDetailViewModelTests: QuickSpec {
                     .to(throwError(Errors.indexOutOfBound))
 
                 expect(cellViewModel?.question) == "Some text not trimmed"
-                expect(cellViewModel?.imageURLString) == "https://t8m.dev/someimg.jpg"
+                expect(cellViewModel?.imageURLString) == "https://t8m.dev/someimg.jpgl"
             }
         }
     }
