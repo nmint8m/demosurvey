@@ -23,7 +23,7 @@ final class SurveyCellViewModel {
     }
 
     var imageURLString: String {
-        return surveyInfo.coverImageURL
+        return surveyInfo.coverImageURL + "l"
     }
 
     init(surveyInfo: SurveyInfo = SurveyInfo()) {

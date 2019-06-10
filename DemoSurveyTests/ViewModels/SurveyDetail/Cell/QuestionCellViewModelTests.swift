@@ -26,7 +26,7 @@ final class QuestionCellViewModelTests: QuickSpec {
 
             it("Test data") {
                 expect(viewModel.question) == "Some question not trimmed"
-                expect(viewModel.imageURLString) == "https://t8m.dev/someimg.jpg"
+                expect(viewModel.imageURLString) == "https://t8m.dev/someimg.jpgl"
             }
         }
     }

@@ -27,7 +27,7 @@ final class SurveyCellViewModelTests: QuickSpec {
             it("Test data") {
                 expect(viewModel.title) == "Some title not trimmed"
                 expect(viewModel.description) == "Some description not trimmed"
-                expect(viewModel.imageURLString) == "https://t8m.dev/someimg.jpg"
+                expect(viewModel.imageURLString) == "https://t8m.dev/someimg.jpgl"
             }
         }
     }
