@@ -1,4 +1,4 @@
-# DemoSurvey
+# Demo MVVM in iOS
 
 ### Targets:
 
